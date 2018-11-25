@@ -1,62 +1,61 @@
 
 <!-- Carlos Gómez  GittHub: @kurolox
-  -- Pablo Valdunciel GitHub: @pabvald -->
+     Pablo Valdunciel GitHub: @pabvald -->
 
 <!DOCTYPE html>
 
 <html>
-<head>
-  <meta charset="utf-8">
-  <title> HoC 2018 </title>
+  
+  <head>
+    <meta charset="utf-8">
+    <title> HoC 2018 </title> 
+  </head>
+
+  <body style="background-color: rgb(180, 167, 167)">
+    <h1> Iniciación a JavaScript - Hora del código 2018</h1>
+
+    <div style="margin-left:100px; float:left"> 
+      <canvas id="canvas" width="500px" height="500px" style="background-color:white; border:2px black solid"></canvas> 
+    </div>
+
+    <div style="float:right; margin-right:500px; margin-top:300px">
+      <div>
+        <input type="button" value="Calcular área" onclick="printArea()">
+      </div> 
+    </div>
+
+   <!-- El código JavaScript debe ir dentro de las etiquetas <script>...</script>.
+         También es posible incluirlo desde un fichero externo. -->
+   <script> 
+      // Obtenemos la referencia al canvas
+      let canvas = document.getElementById('canvas'); 
+      let context = canvas.getContext('2d');
+
+      // Objeto rectángulo
+      let rectangle = {
+          x : 50 ,
+          y : 50 ,
+          width : 50,
+          height : 25,
+          color : 'green',
+          area : function () { return (this.x*this.y);}
+       };
+
+      //Almacenamos el área del rectángulo
+      let area = rectangle.area();
+
+     // Indicamos el color con el que queremos pintar
+      context.fillStyle = rectangle.color;
+
+     // Indicamos las pripiedade del rectángulo y lo dibujamos 
+      context.fillRect( rectangle.x, rectangle.x, rectangle.width, rectangle.height )
 
 
- 
-</head>
-<body style="background-color: rgb(180, 167, 167)">
-<h1> Iniciación a JavaScript - Hora del código 2018</h1>
+      function printArea( ) {
+        console.log("El área del cuadrado es " + area + " u^2");
+      }
 
-<div style="margin-left:100px; float:left"> 
-  <canvas id="canvas" width="500px" height="500px" style="background-color:white; border:2px black solid"></canvas> 
-</div>
-
-<div style="float:right; margin-right:500px; margin-top:300px">
-  <div>
-    <input type="button" value="Calcular área" onclick="printArea()">
-  </div> 
-</div>
-
- <!-- El código JavaScript debe ir dentro de las etiquetas <script>...</script>.
-       También es posible incluirlo desde un fichero externo. -->
-       <script> 
-          // Obtenemos la referencia al canvas
-          let canvas = document.getElementById('canvas'); 
-          let context = canvas.getContext('2d');
-      
-          // Objeto rectángulo
-          let rectangle = {
-              x : 50 ,
-              y : 50 ,
-              width : 50,
-              height : 25,
-              color : 'green',
-              area : function () { return (this.x*this.y);}
-           };
-      
-          //Almacenamos el área del rectángulo
-          let area = rectangle.area();
-      
-         // Indicamos el color con el que queremos pintar
-          context.fillStyle = rectangle.color;
-      
-         // Indicamos las pripiedade del rectángulo y lo dibujamos 
-          context.fillRect( rectangle.x, rectangle.x, rectangle.width, rectangle.height )
-      
-         
-          function printArea( ) {
-            console.log("El área del cuadrado es " + area + " u^2");
-          }
-      
-        </script>
-
-<body>
+    </script>
+  <body>
+  
 </html>
