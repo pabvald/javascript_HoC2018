@@ -1,5 +1,5 @@
 # Hour of Code 2018: JavaScript & TypeScript
-![first slide of the presentation](static/portrait.png)
+![first slide of the presentation](portrait.png)
 
 ## Introducción
 Taller de iniciación a JavaScript y TypeScript para el Hour of Code 2018, organizado en la Universidad de Valladolid.
